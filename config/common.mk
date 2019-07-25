@@ -6,3 +6,7 @@ define add-radio-file-sha1-checked
     $(call add-radio-file,$(1)),
     $(error $(path) SHA1 mismatch ($(sha1) != $(2))))
 endef
+
+# Enforce privapp-permissions whitelist
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.control_privapp_permissions=enforce
