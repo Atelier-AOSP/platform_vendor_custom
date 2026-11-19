@@ -1,0 +1,34 @@
+// SPDX-License-Identifier: Apache-2.0
+
+android_app_import {
+    name: "SettingsGoogle",
+    apk: "SettingsGoogle.apk",
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    overrides: ["Settings"],
+    uses_libs: ["org.apache.http.legacy"],
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+        "com.android.extensions.appfunctions",
+    ],
+    required: [
+        "privapp_whitelist_com.android.settings",
+        "settings-platform-compat-config",
+    ],
+}
+
+android_app_import {
+    name: "SystemUIGoogle",
+    apk: "SystemUIGoogle.apk",
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    overrides: ["SystemUI"],
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+    ],
+    required: ["privapp_whitelist_com.android.systemui"],
+}

@@ -2,7 +2,9 @@
 PRODUCT_PACKAGES += \
     AccessibilityMenu \
     Multiuser \
-    SafetyRegulatoryInfo
+    SafetyRegulatoryInfo \
+    SettingsGoogle \
+    SystemUIGoogle
 
 # Clock styles
 PRODUCT_PACKAGES += \
