@@ -11,5 +11,8 @@ endef
 PRODUCT_VENDOR_PROPERTIES += \
     ro.control_privapp_permissions=enforce
 
+# GMS
+$(call inherit-product, vendor/google/gms/config.mk)
+
 # Packages
 include vendor/custom/config/packages.mk
