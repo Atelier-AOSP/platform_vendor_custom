@@ -14,6 +14,11 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Audio
 include vendor/custom/config/audio.mk
 
+# Bootanimation
+PRODUCT_COPY_FILES += \
+    vendor/custom/bootanimation/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip \
+    vendor/custom/bootanimation/bootanimation-dark.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
+
 # GMS
 $(call inherit-product, vendor/google/gms/config.mk)
 
