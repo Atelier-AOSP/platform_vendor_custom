@@ -10,3 +10,6 @@ endef
 # Enforce privapp-permissions whitelist
 PRODUCT_VENDOR_PROPERTIES += \
     ro.control_privapp_permissions=enforce
+
+# Packages
+include vendor/custom/config/packages.mk
