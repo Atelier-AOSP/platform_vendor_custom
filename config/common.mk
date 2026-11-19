@@ -11,6 +11,9 @@ endef
 PRODUCT_VENDOR_PROPERTIES += \
     ro.control_privapp_permissions=enforce
 
+# Audio
+include vendor/custom/config/audio.mk
+
 # GMS
 $(call inherit-product, vendor/google/gms/config.mk)
 
